@@ -3,7 +3,29 @@
 @import "./modules/classes";
 @import "./modules/globals";
 
+header {
+        section {
+                padding: 2vh $sidePadding;
+                &.header1 {
+                        background-color: $headerSection1BgColor;
+                        color: $textcolor;
+                        @include flex($justify: space-between);
+                        > div {
+                                div {
+                                        @include media($laptop) {
+                                                @include flex;
+                                        }
+                                        margin-right: 1.5 * $smallSpace;
+                                        &:last-child img {
+                                                width: 35%;
+                                        }
 
-        .header1{
-                background-color: $headerSection1BgColor;
-     }  
+                                        img {
+                                                width: 12px; // margin-right: 0.5* $smallSpace;
+                                                margin-right: 1 * $smallSpace;
+                                        }
+                                }
+                        }
+                }
+        }
+}

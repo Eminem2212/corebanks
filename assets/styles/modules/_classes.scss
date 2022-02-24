@@ -1,3 +1,19 @@
 .flex{
     @include flex;
 }
+.none{
+    display: none;
+    &_m{
+        @extend .none;
+        @include media{
+            display: flex;
+        }
+    }
+    &_t{
+        @extend .none;
+        @include media($laptop){
+            display:  flex;
+        }
+    }
+
+}

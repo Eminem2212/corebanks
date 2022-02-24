@@ -1,6 +1,15 @@
 @mixin flex($justify: center, $align: center) {
     display: flex;
-}
-
+    justify-content: $justify;
+    align-items: $align;
+    @content;
+  }
+  
+  
+  @mixin media($width:$tablet,$type:min) {
+      @media screen and (#{$type}-width:$width) {
+          @content;
+      }
+  }
 
     
