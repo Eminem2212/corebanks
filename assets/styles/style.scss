@@ -2,3 +2,8 @@
 @import "./modules/mixins";
 @import "./modules/classes";
 @import "./modules/globals";
+
+
+        .header1{
+                background-color: $headerSection1BgColor;
+     }  
