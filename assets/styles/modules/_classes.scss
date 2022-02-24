@@ -17,3 +17,21 @@
     }
 
 }
+
+.show{
+    display: flex;
+    &_m{
+        @extend .show;
+        @include media{
+            display: none;
+        }
+    }
+    &_t{
+        @extend .show;
+        @include media($laptop){
+            display:  none;
+            
+        }
+    }
+
+}

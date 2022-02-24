@@ -4,6 +4,7 @@
 @import "./modules/globals";
 
 header {
+        font-family: $primaryFont;
         section {
                 padding: 2vh $sidePadding;
                 &.header1 {
@@ -15,14 +16,45 @@ header {
                                         @include media($laptop) {
                                                 @include flex;
                                         }
+                                        &.findUs {
+                                                margin-right: 0;
+                                                @include media {
+                                                        margin-right: 1.5 * $smallSpace;
+                                                }
+                                        }
                                         margin-right: 1.5 * $smallSpace;
-                                        &:last-child img {
-                                                width: 35%;
+                                        &:last-child {
+                                                margin-right: 0;
+                                                img {
+                                                        width: 35%;
+                                                }
                                         }
 
                                         img {
                                                 width: 12px; // margin-right: 0.5* $smallSpace;
                                                 margin-right: 1 * $smallSpace;
+                                        }
+                                }
+                        }
+                }
+                &.header2 {
+                        @include flex($justify: space-between) {
+                                padding: 2vh $sidePadding;
+                                .none_t {
+                                        @include media($laptop) {
+                                                * {
+                                                        margin-left: 4 * $smallSpace;
+                                                }
+                                        }
+                                        &:last-child {
+                                                a.button {
+                                                        background: linear-gradient(180deg, #ef9b11 0%, #405558 100%);
+                                                        padding: 0.5 * $smallSpace $smallSpace;
+                                                        border-radius: 2 * $smallSpace;
+                                                        width: 100px;
+                                                        max-height: 70px;
+                                                        padding-left: $sidePadding;
+                                                }
                                         }
                                 }
                         }
