@@ -24,6 +24,7 @@
         @extend .show;
         @include media{
             display: none;
+            
         }
     }
     &_t{
@@ -35,3 +36,12 @@
     }
 
 }
+.section2{
+    @include media{
+        
+    }
+}
+
+
+        
+

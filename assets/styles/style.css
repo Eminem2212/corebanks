@@ -67,7 +67,7 @@ header {
 }
 
 header section {
-  padding: 2vh 2vw;
+  padding: 2vh 5vw;
 }
 
 header section.header1 {
@@ -135,7 +135,7 @@ header section.header2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2vh 2vw;
+  padding: 2vh 5vw;
 }
 
 @media screen and (min-width: 1024px) {
@@ -151,6 +151,92 @@ header section.header2 .none_t:last-child a.button {
   border-radius: 10px;
   width: 100px;
   max-height: 70px;
-  padding-left: 2vw;
+  padding-left: 5vw;
+}
+
+section {
+  padding: 2vh 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.section1 {
+  min-height: 200px;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.section1 * {
+  width: 85%;
+}
+
+@media screen and (min-width: 375px) {
+  section.section1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assets/img/sectionBgimg.png);
+    background-position: 50% 20%;
+  }
+  section.section1 * {
+    width: 55%;
+  }
+}
+
+section.section2 .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 4px 4px 0px #ada2a240;
+          box-shadow: 0px 4px 4px 0px #ada2a240;
+  height: 180px;
+  width: 180px;
+  display: inline-block;
+}
+
+section.section2 .box:not(:first-child) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  section.section2 .box:not(:first-child) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -61,3 +61,44 @@ header {
                 }
         }
 }
+section {
+        padding: 2vh $sidePadding;
+        @include flex;
+        &.section1 {
+                min-height: 200px;
+                height: 50vh;
+                @include flex($align: flex-start) {
+                        flex-direction: column;
+                }
+                * {
+                        width: 85%;
+                }
+
+                @include media(375px) {
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-image: url(/assets/img/sectionBgimg.png);
+                        background-position: 50% 20%;
+                        * {
+                                width: 55%;
+                        }
+                }
+        }
+        &.section2 {
+                .box {
+                        @include flex($justify:space-between){
+                                flex-direction: column;
+                        }
+                        box-shadow: 0px 4px 4px 0px #ada2a240;
+                        height: 180px;
+                        width: 180px;
+                        display: inline-block;
+                        &:not(:first-child) {
+                                display: none;
+                                @include media {
+                                        @include flex;
+                                }
+                        }
+                }
+        }
+}
